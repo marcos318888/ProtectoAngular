@@ -7,6 +7,10 @@ import { Header } from './header/header';
 import { Footer } from './footer/footer';
 import { Title } from './title/title';
 import { Avatar } from './avatar/avatar';
+import { Btn } from './btn/btn';
+import { Icon } from './icon/icon';
+import { Link } from './link/link';
+import { UserCard } from './user-card/user-card';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { Avatar } from './avatar/avatar';
     Header,
     Footer,
     Title,
-    Avatar
+    Avatar,
+    Btn,
+    Icon,
+    Link,
+    UserCard
   ],
   imports: [
     BrowserModule,
