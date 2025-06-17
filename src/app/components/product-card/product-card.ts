@@ -2,12 +2,11 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
-  standalone: false,
   templateUrl: './product-card.html',
-  styleUrl: './product-card.scss'
+  styleUrls: ['./product-card.scss']
 })
 export class ProductCard {
-@Input() product: any
+  @Input() product: any
 
   productImageStyle = {
     border: '1px solid black',

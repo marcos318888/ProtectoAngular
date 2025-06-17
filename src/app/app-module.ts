@@ -2,40 +2,26 @@ import { NgModule ,provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
-import { App } from './app';
-import { Header } from './header/header';
-import { Footer } from './footer/footer';
-import { Title } from './title/title';
-import { Avatar } from './avatar/avatar';
-import { Btn } from './btn/btn';
-import { Icon } from './icon/icon';
-import { Link } from './link/link';
-import { UserCard } from './user-card/user-card';
-import { ProductCard } from './product-card/product-card';
+import { AppComponent } from './app';
 import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from './components/components-module';
+import { PagesModule } from './pages/pages-module';
 
 @NgModule({
   declarations: [
-    App,
-    Header,
-    Footer,
-    Title,
-    Avatar,
-    Btn,
-    Icon,
-    Link,
-    UserCard,
-    ProductCard
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ComponentsModule,
+    PagesModule,
+    HttpClientModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay())
   ],
-  bootstrap: [App]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
