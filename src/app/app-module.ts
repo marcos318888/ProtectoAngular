@@ -1,4 +1,4 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { NgModule ,provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
@@ -11,6 +11,8 @@ import { Btn } from './btn/btn';
 import { Icon } from './icon/icon';
 import { Link } from './link/link';
 import { UserCard } from './user-card/user-card';
+import { ProductCard } from './product-card/product-card';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { UserCard } from './user-card/user-card';
     Btn,
     Icon,
     Link,
-    UserCard
+    UserCard,
+    ProductCard
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
