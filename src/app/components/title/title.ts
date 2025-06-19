@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
 
 @Component({
   selector: 'app-title',
-  standalone: false,
   templateUrl: './title.html',
   styleUrl: './title.scss'
 })

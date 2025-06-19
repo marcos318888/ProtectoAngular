@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 @Component({
   selector: 'app-avatar',
   template: `
@@ -15,7 +16,7 @@ import { Component } from '@angular/core';
     `.sales { height: 50px; width: 50px; padding: 5px; border-radius: 18px; }`,
   ]
 })
-export class Avatar {
+export class AvatarComponent {
 
   @Input() userInfo: any;
 

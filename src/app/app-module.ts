@@ -1,15 +1,15 @@
-import { NgModule ,provideBrowserGlobalErrorListeners } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { App, AppComponent } from './app';
 import { AppRoutingModule } from './app-routing-module';
-import { AppComponent } from './app';
-import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from './components/components-module';
 import { PagesModule } from './pages/pages-module';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    App,
   ],
   imports: [
     BrowserModule,
@@ -18,10 +18,7 @@ import { PagesModule } from './pages/pages-module';
     PagesModule,
     HttpClientModule
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideClientHydration(withEventReplay())
-  ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [App]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductsService } from 'src/app/services/products/products.service';
+import { ProductsService } from '../../services/products/products';
 
 @Component({
   selector: 'app-products',
@@ -21,5 +21,13 @@ export class ProductsComponent {
 
   products: any;
 
-  
+  constructor(private productService: ProductsService) {}
+
+  ngOnInit(): void {
+    this.productService.getProducts()
+      .subscribe((response: any) => {
+        this.products = response.products
+      })
+
   }
+}

@@ -1,29 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Avatar} from './avatar/avatar';
-import { Header } from './header/header';
+import { HeaderComponent } from './header/header';
 import { Footer} from './footer/footer';
 import { Title } from './title/title';
 import { Btn } from './btn/btn';
 import { Icon } from './icon/icon';
 import { Link } from './link/link';
 import { UserCard } from './user-card/user-card';
-import { ProductCard } from './product-card/product-card';
+import { ProductCardComponent } from './product-card/product-card';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from '../app-routing.module';
+import { AppRoutingModule } from '../app-routing-module';
+import { AvatarComponent } from './avatar/avatar';
 
 @NgModule({
   declarations: [
-    Avatar,
-    Header,
+    AvatarComponent,
+    HeaderComponent,
     Footer,
     Title,
-    Avatar,
     Btn,
     Icon,
     Link,
     UserCard,
-    ProductCard,
+    ProductCardComponent,
   ],
   imports: [
     CommonModule,
@@ -31,8 +30,8 @@ import { AppRoutingModule } from '../app-routing.module';
     AppRoutingModule
   ],
   exports: [
-    ProductCard,
-    Header,
+    ProductCardComponent,
+    HeaderComponent,
   ]
 })
 export class ComponentsModule { }

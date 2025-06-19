@@ -1,5 +1,9 @@
-<app-title 
-    [title]="PageTitle" 
-    (dataFromChild)="onDataCheck($event)"
-></app-title>
-<app-avatar [userInfo]="userInfo"></app-avatar>
+<header>
+    <app-title 
+        [title]="PageTitle" 
+        (dataFromChild)="onDataCheck($event)"
+    ></app-title>
+    <a rourerLink="/products" routerLinkActive="active">products</a>
+    <a rourerLink="/about-us" routerLinkActive="active">about us</a>
+    <app-avatar [userInfo]="userInfo"></app-avatar>
+</header>
